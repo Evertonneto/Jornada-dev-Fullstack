@@ -1,5 +1,6 @@
 import userEvent from "@testing-library/user-event";
 import React,{ useRef, useState } from "react";
+import VideoFooter from "./components/footer/videofooter";
 import './Video.css'
 
 function Video() {
@@ -26,11 +27,14 @@ function Video() {
         ref={videoRef}
         onClick={handleStart}
         className="video__player"
-        src="https://firebasestorage.googleapis.com/v0/b/jornada2-eb156.appspot.com/o/ZqU6oFX6.mp4.mp4?alt=media&token=9839e872-2d5e-4da3-9299-17eb2949831d"
+        src="https://firebasestorage.googleapis.com/v0/b/jornada-b5e9d.appspot.com/o/brecker2.mp4?alt=media&token=9aa979e9-0907-4093-abd5-a71efe4fc946"
           loop
         >
 
         </video>
+        {/* Side Bar*/}
+        <VideoFooter />
+        {/* Footer */}
         
         </div>
     )
