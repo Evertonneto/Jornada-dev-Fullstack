@@ -1,15 +1,17 @@
-import userEvent from "@testing-library/user-event";
 import React,{ useRef, useState } from "react";
-import VideoFooter from "./components/footer/videofooter";
+import VideoFooter from "./components/footer/VideoFooter";
+import VideoSideBar from "./components/sidebar/VideoSideBar";
+
 import './Video.css'
 
-function Video() {
+function Video({likes,messages,shares,name,description,music,url}) {
 
     const videoRef = useRef(null)
     const [play, setPlay] = useState(false)
 
+    
     function handleStart(){
-
+        
         if(play){
             videoRef.current.pause()
             setPlay(false)
@@ -17,9 +19,9 @@ function Video() {
             videoRef.current.play()
             setPlay(true)
         }
-
+        
     }
-
+    
     return (
         <div className="video"> 
         
@@ -27,14 +29,24 @@ function Video() {
         ref={videoRef}
         onClick={handleStart}
         className="video__player"
-        src="https://firebasestorage.googleapis.com/v0/b/jornada-b5e9d.appspot.com/o/brecker2.mp4?alt=media&token=9aa979e9-0907-4093-abd5-a71efe4fc946"
+        src={url}
           loop
         >
 
         </video>
-        {/* Side Bar*/}
-        <VideoFooter />
-        {/* Footer */}
+        
+        
+        <VideoSideBar
+            likes={likes}
+            messages={messages}
+            shares={shares}
+        />
+        
+        <VideoFooter 
+            name={name}
+            description={description}
+            music={music}
+        />
         
         </div>
     )
