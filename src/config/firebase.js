@@ -1,16 +1,16 @@
 
 import { initializeApp } from "firebase/app";
-import {getFirestore} from 'firebase/firestore/lite'
+import { getFirestore } from 'firebase/firestore/lite';
 
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBb-Zbsicf3Mqp-WrgEvcWb06hhhl9xvW0",
-  authDomain: "tiktok---jornada-fullsta-57aee.firebaseapp.com",
-  projectId: "tiktok---jornada-fullsta-57aee",
-  storageBucket: "tiktok---jornada-fullsta-57aee.appspot.com",
-  messagingSenderId: "443108691575",
-  appId: "1:443108691575:web:aec0b2c8f798fcc1ea8072"
+  apiKey: "AIzaSyDhaFdosUfBFHeTQgRxSAra5RFHR5iSkiA",
+  authDomain: "jornada-full-stack.firebaseapp.com",
+  projectId: "jornada-full-stack",
+  storageBucket: "jornada-full-stack.appspot.com",
+  messagingSenderId: "376545347081",
+  appId: "1:376545347081:web:01263d5fdbd6acb44ddad8"
 };
 
 // Initialize Firebase
